@@ -1,8 +1,16 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
-			<text class="title">{{title}}</text>
+			<text class="title">123{{title}}</text>
+		</view>
+
+		<view class="">
+			<u-button >默认按钮</u-button>
+			<u-button type="primary" :ripple="true" ripple-bg-color="red">主要按钮</u-button>
+			<u-button type="success">成功按钮</u-button>
+			<u-button type="info">信息按钮</u-button>
+			<u-button type="warning">警告按钮</u-button>
+			<u-button type="error">危险按钮</u-button>
 		</view>
 	</view>
 </template>
@@ -11,7 +19,17 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				list: [{
+					text: '点赞',
+					color: 'blue',
+					fontSize: 28
+				}, {
+					text: '分享'
+				}, {
+					text: '评论'
+				}],
+				show: true
 			}
 		},
 		onLoad() {
